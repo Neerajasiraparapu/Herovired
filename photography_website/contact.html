@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- Latest compiled and minified CSS -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+   <!-- Optional theme -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css"
+      integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+   <!-- Latest compiled and minified JavaScript -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
+      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="style.css">
+   <title>Photograph Website</title>
+   
+</head>
+
+<body>
+   <nav class="navbar navbar-default">
+      <div class="container-fluid">
+         <div class="navbar-header" style="width: 350px; ">
+            <a class="navbar-brand" href="#" style="color: #6bb648;">
+               <h4 style="font-size:larger;margin-top: 5px;"><b>Photography</b></h4>
+               <h5 style="font-size: 15px; margin-left: 20px;"><b>Nature love</b></h5>
+            </a>
+         </div>
+         <ul class="nav navbar-nav">
+            <li class="active"><a href="index.html" style="color: rgb(21, 119, 70);">
+                  <h4>Home</h4>
+               </a></li>
+            <li><a href="about.html" style="color:rgb(21, 119, 70);">
+                  <h4>About us</h4>
+               </a></li>
+            <li><a href="service.html" style="color:rgb(21, 119, 70);">
+                  <h4>Service</h4>
+               </a></li>
+           
+            <li><a href="portfolio.html" style="color:rgb(21, 119, 70) ;">
+                  <h4>Portfolio</h4>
+               </a></li>
+            <li><a href="contact.html" style="color:rgb(21, 119, 70);">
+                  <h4>Contact us</h4>
+               </a></li>
+         </ul>
+         <i class="fa fa-user" aria-hidden="true"
+            style="margin-top: 25px; font-size: 25px; float: right; padding-right:50px ;"></i>
+         <i class="fa fa-search" aria-hidden="true"
+            style="font-size: 25px; float: right; padding-right:40px; margin-top: 25px;"></i>
+
+      </div>
+   </nav>
+   
+   <section id="contact">
+    <div class="container-fluid" style="background-image: url(imgs/h9.jpg);background-size: cover;background-repeat: no-repeat; width: 100%;height: 100%;">
+       <div class="row align-items-center">
+          <center>
+          <div class="col-lg-4">
+             <form>
+                <div class="mb-3">
+                  <small style="color: white;">Name :</small>
+                  <input type="text" placeholder="Enter your Name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                </div>
+                
+                 <div class="mb-3">
+                  <small style="color: white;">Phone number :</small>
+                  <input type="number" placeholder="Enter your Phone number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                </div>
+                <div class="mb-3">
+                    <small style="color: white;">Email : </small>
+                    <input type="email" class="form-control"placeholder="Enter your Email" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                  </div>
+                <div class="mb-3">
+                  <small style="color: white;">Photography Type :</small>
+                  <input type="text" class="form-control" placeholder="Wedding photography or Event photography or Travelling photography etc.."id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                </div>
+                 <div class="mb-3">
+                   <small style="color: white;">Address :</small>
+                   <textarea name="" id="" cols="30" rows="4" placeholder="Enter your Address" class="form-control" required></textarea>
+                 </div>
+                  <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Submit</button>
+                <div class="modal" id="myModal">
+                     <div class="modal-dialog">
+                        <div class="modal-content">
+    
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                        <h4 class="modal-title"></h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+      
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                     Are You Sure ! you want to Submit the Data.
+                    </div>
+      
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary" data-dismiss="modal">Submit</button>
+                </div>
+      
+             </div>
+        </div>
+        </div>
+
+              </form>
+          </div>
+        </center>
+       </div>
+      
+    </div>
+ </section>
+   <footer>
+
+      <div class="container-fluid" style="background:rgb(219, 205, 205); height: 250px;">
+         <div class="row gy-5">
+            <div class="col-md-3">
+               <h4 class="logo-text"><b style="color:rgb(20, 9, 9)">Photography</b></h4>
+               <p>photography Nature love for everyone</p>
+               <div class="social-icons">
+                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                  <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                  <i class="fa fa-facebook-official" aria-hidden="true"></i>
+               </div>
+            </div>
+            <div class="col-md-2">
+               <h5 class="title-sm"><b style="color:rgb(20, 14, 14)">CAMPANY</b></h5>
+               <div class="footer-links">
+                  <a href="#">About Us</a><br>
+                  <a href="#">Help Center</a><br>
+                  <a href="#">License</a><br>
+                  <a href="#">Market API</a><br>
+                  <a href="#">Site Map</a><br>
+               </div>
+            </div>
+            <div class="col-md-3">
+               <h5 class="title-sm"><b style="color:rgb(20, 11, 11)">MORE FROM US</b></h5>
+               <div class="footer-links">
+                  <a href="#">Mobiles and Layout Apps</a><br>
+                  <a href="#">Marketplace</a><br>
+                  <a href="#">About Vendors</a><br>
+                  <a href="#">Gift Vouchers</a><br>
+               </div>
+            </div>
+            <div class="col-md-3">
+               <h5 class="title-sm"><b style="color:rgb(19, 12, 12) ">CONTACT US</b></h5>
+               <div class="footer-links">
+                  <p class="mb">121-32 Ramalayam colony, fgh street,Andhra Pradesh, India, 533102</p>
+                  <p class="mb-">+91 9912533146</p>
+                  <p class="mb">siraparapuneeraja@gmail.com</p>
+               </div>
+            </div>
+         </div>
+      </div>
+      </div>
+      <div class="footer-bottom">
+         <div class="container-fluid" style="background:whitesmoke">
+            <div class="row justify-content-between gy-3">
+               <div class="col-md-6">
+                  <p class="mb-0">© 2023 ,Photography Theme. All Rights Resevered.Buily with Hasthemes.</p>
+               </div>
+               <div class="col-auto">
+                  <p class="mb-0">Created with using HTML,CSS AND BOOTSTRAP</p>
+               </div>
+            </div>
+         </div>
+
+   </footer>
+
+
+</body>
+
+</html>

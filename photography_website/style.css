@@ -1,0 +1,39 @@
+.homepage{
+    font-size: 14px;
+    font-weight: normal;
+    height: 100%;
+    background: url(desk_image1.jpg) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+section {
+    padding-top: 20px;
+    padding-bottom: 50px;
+ }
+
+.section-intro {
+text-align: center;
+margin-bottom: 60px;
+}
+
+.section-intro .hline {
+width: 120px;
+height: 2px;
+background-color: rgba(0, 0, 0, 0.1);
+margin: 16px auto 0 auto;
+}
+.icon-box {
+      width: 60px;
+      height: 60px;
+      background-color: #48dd6d;
+      color: #fff;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      flex: none;
+}
+.title-sm {
+    color: #fff;
+}
