@@ -2,7 +2,7 @@ body{
     background: lightgrey;
 }
 #container{
-    background: linear-gradient(to right,#0f0c29,#302b63,#24243e);
+    background: linear-gradient(to right,#c2ba50,#635f2b,#3b3e24);
     position:absolute;
     margin: auto;
     top: 0;
