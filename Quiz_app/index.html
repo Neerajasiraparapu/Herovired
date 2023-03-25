@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Quiz App</title>
+</head>
+<body>
+    
+    <div class="Quiz-container" id="quiz" style="border: 2px solid rgb(205, 235, 150);border-radius: 10px;" >
+        <center><h1>FSD Quiz</h1></center>
+        <div class="quiz-header">
+            <h2 id="question">MCQS TEST</h2>
+            <ul>
+                <li>
+                    <input class="answer" type="radio" name="answer" id="a">
+                    <label for="a" id="optionA">Option A</label>
+                </li>
+                <li>
+                    <input class="answer" type="radio" name="answer" id="b">
+                    <label for="b" id="optionB">Option B</label>
+                </li>
+                <li>
+                    <input class="answer" type="radio" name="answer" id="c">
+                    <label for="c" id="optionC">Option C</label>
+                </li>
+                <li>
+                    <input class="answer" type="radio" name="answer" id="d">
+                    <label for="d" id="optionD">Option D</label>
+                </li>
+            </ul>
+        </div>
+        <button id="submit">SUBMIT</button>
+    </div>
+    
+    <script>
+        const data = [
+    {
+        question:"What does HTML stand for ?",
+        a:"Hypertext Markup Language",
+        b:"Hypertext Markdown Language",
+        c:"Hyperloop Machine Language",
+        d:"Helicopters terminals Motorboats lamborginis",
+        correct:"a",
+    },
+    {
+        question:"What does Css stand for ?",
+        a:"Cascad Style Sheet",
+        b:"Cascading Style Sheet",
+        c:"Cascading Sheet Style ",
+        d:"Cascading of Style Sheet",
+        correct:"b",
+    },
+    {
+        question:"What does JSX stand for ?",
+        a:"javascipt HTML",
+        b:"java standard XML",
+        c:"JavaScript XML",
+        d:"javaScript XMLs",
+        correct:"c",
+    },
+    {
+        question:"What is the syntax to drop a collection in MongoDB?",
+        a:"drop()",
+        b:"db.collection.drop()",
+        c:"db.drop.collection()",
+        d:"collection.drop()",
+        correct:"b",
+    },
+    {
+        question:"How many types of DOM are they in javascript ?",
+        a:"3",
+        b:"2",
+        c:"4",
+        d:"5",
+        correct:"a",
+    },
+]
+const quiz = document.getElementById("quiz");
+const answerELs = document.querySelectorAll(".answer");
+const questionE1 = document.getElementById("question");
+const optionA = document.getElementById("optionA");
+const optionB = document.getElementById("optionB");
+const optionC = document.getElementById("optionC");
+const optionD = document.getElementById("optionD");
+
+const submitBtn = document.getElementById("submit");
+
+let currentQuizAns = 0
+let scoreQuiz = 0
+
+loadingQuiz()
+
+function loadingQuiz(){
+    deselectedAnswers()
+    const currentQuizData = data[currentQuizAns]
+    questionE1.innerText = currentQuizData.question
+    optionA.innerText = currentQuizData.a
+    optionB.innerText = currentQuizData.b
+    optionC.innerText = currentQuizData.c
+    optionD.innerText = currentQuizData.d
+
+}
+function deselectedAnswers(){
+    answerELs.forEach((answerEL)=>(
+        answerEL.checked = false
+    ))
+}
+function getSelected(){
+    let answer
+    answerELs.forEach((answerEL)=>{
+        if(answerEL.checked){
+            answer=answerEL.id
+        }
+    })
+    return answer
+}
+
+submitBtn.addEventListener("click",()=>{
+    const answer = getSelected()
+
+    if(answer){
+        if(answer === data[currentQuizAns].correct){
+            scoreQuiz++
+        }
+        currentQuizAns++
+
+        if (currentQuizAns < data.length){
+            loadingQuiz()
+        }
+        else{
+           quiz.innerHTML =`
+           <h2>You Answered ${scoreQuiz}/${data.length} Questions correctly</h2>
+           
+           <button onclick="location.reload()">rewrite</button>
+           `
+        }
+    }
+})
+    </script>
+</body>
+</html>
