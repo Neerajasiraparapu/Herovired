@@ -78,7 +78,12 @@ function gameLoop(){
                 else if(ball.centerY==paddle.centerY){
                     angle=(type=='user'?0:Math.PI)
                 }
+                V+=0.5
+                Vx=V*Math.cos(angle)
+                Vy=V.Math.sin(angle)
             }
+            let compLevel=0.01
+            compPaddle.style.marginTop=`${marginTop(compPaddle)+((ball.centerY-(marginTop(compPaddle)+36)))*compLevel}px`
 
             ball.style.marginLeft=`${marginLeft(ball)+Vx}px`
             ball.style.marginTop=`${marginTop(ball)+Vy}px`
@@ -88,6 +93,12 @@ function gameLoop(){
             }
             else if(S_pressed && marginTop(userPaddle)<472){
                 userPaddle.style.marginTop=`${marginTop(userPaddle)+2}px` 
+            }
+            if(marginTop(compPaddle)<0){
+                compPaddle.style.marginTop='0px'
+            }
+            else if(marginTop(compPaddle)>472){
+                compPaddle.style.marginTop='472px'
             }
         },5)
     },500)
@@ -108,7 +119,16 @@ function collisionDetected(paddle){
     paddle.centerX=marginTop(paddle)+5
     paddle.centerY=marginTop(paddle)+36
 
-    return ball.left<paddle.right&&ball.top<paddle.bottom&&ball.right>paddle.left&&ball.bottom>paddle.top
+    let type=(marginLeft(paddle)==30)?'user':'comp'
+    let boolean=false
+    if(type=='user'&& Vx<0){
+        boolean=true
+    }
+    else if(type=='comp'&& Vx>0){
+        boolean=true
+    }
+
+    return ball.left<paddle.right&&ball.top<paddle.bottom&&ball.right>paddle.left&&ball.bottom>paddle.top &&boolean
 }
 
 
