@@ -94,7 +94,7 @@ let scoreQuiz = 0
 loadingQuiz()
 
 function loadingQuiz(){
-    deselectedAnswers()
+    deselectedAns()
     const currentQuizData = data[currentQuizAns]
     questionE1.innerText = currentQuizData.question
     optionA.innerText = currentQuizData.a
@@ -103,7 +103,7 @@ function loadingQuiz(){
     optionD.innerText = currentQuizData.d
 
 }
-function deselectedAnswers(){
+function deselectedAns(){
     answerELs.forEach((answerEL)=>(
         answerEL.checked = false
     ))
