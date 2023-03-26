@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <p id="p-id" onmouseover="myOverFunction()" onmouseout="myOutFunction()">
+        JavaScript can change all the HTML elements in the page
+JavaScript can change all the HTML attributes in the page
+JavaScript can change all the CSS styles in the page
+JavaScript can remove existing HTML elements and attributes
+JavaScript can add new HTML elements and attributes
+JavaScript can react to all existing HTML events in the page
+JavaScript can create new HTML events in the page
+    </p>
+    <button id="btn-id" onmouseover="myOverFunctionBtn()" onmouseout="myOutFunctionBtn()">BUTTON</button><br><br>
+    <p id="i-id">Hello herovired</p>
+    <input  id="in-id">
+    <button id="inp-id" >click</button>
+    <p id="input-id"></p>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JS</li>
+        <li>ReactJs</li>
+        <li>Node</li>
+    </ul>
+<script>
+
+    function myOverFunction(){
+        document.getElementById("p-id").style.color="red";
+       
+    }
+    function myOutFunction(){
+        document.getElementById("p-id").style.color="black";
+        
+    }
+    function myOverFunctionBtn(){
+        document.getElementById("btn-id").innerHTML="HeroVired";
+    }
+    function myOutFunctionBtn(){
+        document.getElementById("btn-id").innerHTML="BUTTON";
+    }
+    let para=document.getElementById("i-id")
+    let input=document.getElementById("in-id");
+    let butin=document.getElementById("inp-id");
+    butin.addEventListener('click',function(){
+        input.setAttribute("value",para.innerHTML);
+    })
+    let ele=document.querySelectorAll('li');
+    ele.forEach((item)=>{
+        item.addEventListener('mouseover',function(){
+            item.style.color="blue";
+            item.style.fontWeight="bold"; 
+        })
+        item.addEventListener('mouseout',function(){
+            item.style.color="black";
+            item.style.fontWeight="normal"; 
+        })
+    })
+    
+    
+</script>
+</body>
+</html>
