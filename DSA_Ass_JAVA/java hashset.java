@@ -1,33 +1,27 @@
+import java.io.*;
 import java.util.*;
-class Solution{
-	
-	public static void main(String []argh)
-	{
-		Scanner sc = new Scanner(System.in);
-		
-		while (sc.hasNext()) {
-			String input=sc.nextLine();
-            //Complete the code
-            System.out.println(check(input));
-		}
-		
-	}
-    public static boolean check(String input){
-        Stack<Character> stack=new Stack<>();
-        for(char s:input.toCharArray() ){
-            if(s=='{'){
-                stack.push('}');
-            }
-            else if(s=='('){
-                stack.push(')');
-            }
-            else if(s=='['){
-                stack.push(']');
-            }
-            else if(stack.isEmpty()||s!=stack.pop()){
-                return false;
-            }
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+ public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int t = s.nextInt();
+        String [] pair_left = new String[t];
+        String [] pair_right = new String[t];
+        
+        for (int i = 0; i < t; i++) {
+            pair_left[i] = s.next();
+            pair_right[i] = s.next();
         }
-        return stack.isEmpty();
+
+//Write your code here
+        Set <String> st = new HashSet<>();
+        for(int i=0;i<t;i++){
+            st.add(pair_left[i]+" "+pair_right[i]);
+            System.out.println(st.size());
+        }    
     }
 }
