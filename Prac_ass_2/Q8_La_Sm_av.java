@@ -3,6 +3,7 @@ public class Main
 {
 	public static void main(String[] args) {
 	    Scanner s=new Scanner(System.in);
+	    try{
 		System.out.print("num1:");
 		int a=s.nextInt();
 		System.out.print("num2:");
@@ -17,5 +18,9 @@ public class Main
 		System.out.println("The Largest Number:"+largest);
 		int avg=(a+b+c)/3;
 		System.out.println("Average of all three numbers:"+avg);
+	    }
+	    catch(Exception e){
+		    System.out.println("Invalid numbers");
+	    }		    
 	}
 }
