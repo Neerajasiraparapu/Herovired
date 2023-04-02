@@ -1,11 +1,15 @@
+
+
 import java.util.Scanner;
  
 public class Main
 {
     public static void main(String[] args)
     {
+        Scanner s=new Scanner(System.in);
+        int n=s.nextInt();
      try{
-        for(int i=0;i<=7;i+=2)
+        for(int i=0;i<=n;i+=2)
         {
             for(int j=0;j<=i-2; j++) 
             { 
@@ -14,7 +18,7 @@ public class Main
             System.out.println(""); 
             
         } 
-        for(int i=7;i>=0;i-=2)
+        for(int i=n;i>=0;i-=2)
         {
             for(int j=0;j<=i-1;j++)
             {
