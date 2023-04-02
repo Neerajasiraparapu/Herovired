@@ -3,6 +3,7 @@ public class Main
 {
 	public static void main(String[] args) {
 	    Scanner s=new Scanner(System.in);
+            try{	
 		System.out.print("num:");
 		int a=s.nextInt();
 		int flag=0;
@@ -22,6 +23,10 @@ public class Main
 		    else{
 		        System.out.println("The given number "+a+" is NOT a Prime number");
 		    }
-		}    
+		} 
+	    }
+	    catch(Exception e){
+		    System.out.println("Invalid number");
+	    }	    
 	}
 }
