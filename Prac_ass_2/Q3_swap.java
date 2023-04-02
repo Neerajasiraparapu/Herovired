@@ -3,6 +3,7 @@ public class Main
 {
 	public static void main(String[] args) {
 	    Scanner s=new Scanner(System.in);
+	    try{	
 		System.out.print("numA:");
 		int a=s.nextInt();
 		System.out.print("numB:");
@@ -12,5 +13,9 @@ public class Main
 		b=temp;
 		System.out.println("numA:"+a);
 		System.out.println("numB:"+b);
+	    }
+	    catch(Exception e){
+		 System.out.println("Invalid numbers");
+	    }		    
 	}
 }
