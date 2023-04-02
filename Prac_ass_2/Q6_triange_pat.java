@@ -4,9 +4,10 @@ public class Main
 {
     public static void main(String[] args)
     {
-        for(int i=0;i<=5;i+=2)
+     try{
+        for(int i=0;i<=7;i+=2)
         {
-            for(int j=0;j<=i-2; ++) 
+            for(int j=0;j<=i-2; j++) 
             { 
                 System.out.print("*"+ " ");
             } 
@@ -21,6 +22,10 @@ public class Main
             }
             System.out.println("");
         }
+     }
+     catch(Exception e){
+      System.out.println("Invalid");
+     } 
     }
 }
  
