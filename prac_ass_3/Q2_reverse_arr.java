@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class Main{
     public static void main(String[] args){
         Scanner s=new Scanner(System.in);
+        try{
         int n=s.nextInt();
         System.out.print("arrNum:");
         int arr[]=new int[n];
@@ -13,6 +14,9 @@ public class Main{
         for(int i=n-1;i>=0;i--){
             System.out.print(arr[i]+" ");
         }
-        s.close();
+        }
+        catch(Exception e){
+            System.out.println("Invalid number");
+        }    
     }
 } 
