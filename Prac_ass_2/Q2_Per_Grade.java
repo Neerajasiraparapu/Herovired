@@ -5,6 +5,8 @@ public class Main
 {
 	public static void main(String[] args) {
 	    Scanner s=new Scanner(System.in);
+		
+	    try{	
 		System.out.println("Marks Obtained by a Student:");
 		int Marks=s.nextInt();
 		System.out.println("Total Marks:");
@@ -26,5 +28,9 @@ public class Main
 		else if(Percentage>=90 && Percentage<=100){
 		    System.out.println("Grade-A,GPA=4.0");
 		}
+	    }	
+	    catch(Exception e){
+		    System.out.println("Invalid Marks");
+	    }		    
 	}
 }
